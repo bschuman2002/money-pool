@@ -1,0 +1,29 @@
+{
+  "name": "money-pool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bschuman2002/money-pool.git"
+  },
+  "author": "Ben Schuman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bschuman2002/money-pool/issues"
+  },
+  "homepage": "https://github.com/bschuman2002/money-pool#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongodb": "^4.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}
