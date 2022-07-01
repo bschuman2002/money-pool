@@ -9,6 +9,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const sessions = require("./src/routes/sessions");
+const groups = require("./src/routes/groups");
 
 app.use(cors());
 app.use(express.json());
@@ -16,6 +17,7 @@ app.use(bodyParser.json(), urlEncodedParser);
 
 // Routes
 app.use(sessions);
+app.use(groups);
 
 app.get("/", (req, res) => {
   res.send("Hello world");
