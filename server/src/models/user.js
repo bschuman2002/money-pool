@@ -1,3 +1,4 @@
+const { ObjectId } = require("mongodb");
 const mongoose = require("mongoose");
 
 const userSchema = mongoose.Schema({
@@ -13,6 +14,7 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  groups: [{ groupId: ObjectId, groupName: String }],
 });
 
 const User = mongoose.model("User", userSchema);
