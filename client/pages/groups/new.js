@@ -29,6 +29,7 @@ const NewGroup = () => {
               onChange={(e) => setGroupName(e.target.value)}
               className="w-full outline-none"
               placeholder="Group Name"
+              maxLength={30}
             />
             <XIcon
               className="cursor-pointer h-6 ml-auto mr-1 transform duration-100 hover:scale-125 text-gray-700"
