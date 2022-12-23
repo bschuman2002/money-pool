@@ -43,11 +43,12 @@ const Navbar = () => {
                 <p className="text-gray-800">{session?.user?.name}</p>
                 <p className="text-sm text-gray-600">{session?.user?.email}</p>
               </div>
-              <div className="flex ml-auto mr-2 py-1 items-center group">
-                <button className="mr-1" onClick={signOut}>
-                  Sign Out
-                </button>
-                <ArrowRightOnRectangleIcon className="h-5 -translate-x-10 opacity-0 text-gray-800 transition duration-150 group-hover:translate-x-0 group-hover:opacity-100" />
+              <div
+                className="flex ml-auto mr-2 py-1 items-center group hover:text-gray-700 active:text-gray-600 cursor-pointer"
+                onClick={signOut}
+              >
+                <p className="mr-1">Sign Out</p>
+                <ArrowRightOnRectangleIcon className="h-5 -translate-x-10 opacity-0 transition duration-150 group-hover:translate-x-0 group-hover:opacity-100" />
               </div>
             </div>
           </>
