@@ -1,15 +1,23 @@
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowRightOnRectangleIcon } from "@heroicons/react/24/outline";
+import { fetchGroups } from "../services/users";
 
 const Navbar = () => {
   const { data: session } = useSession();
   const [hidePopout, setHidePopout] = useState(true);
 
+  useEffect(() => {
+    const docs = fetchGroups("3mWD7mgipOOuXBOJhv7J");
+    docs.then((data) => {
+      data.forEach((doc) => console.log(doc.data()));
+    });
+  }, []);
+
   return (
     <>
-      <div className="flex bg-white h-12 shadow-md items-center">
+      <div className="flex bg-white h-12 shadow-md items-center sticky top-0">
         {session?.user?.image && (
           <>
             <div
